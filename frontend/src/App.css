@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import "tailwindcss";
+
+@theme {
+  --font-work-sans: "Work Sans", Arial, sans-serif;
+
+  --color-base: rgb(30, 30, 46);
+  --color-mantle: rgb(24, 24, 37);
+  --color-crust: rgb(17, 17, 27);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-work-sans);
+  }
+  
+  h1, label, button {
+    @apply text-white
+  }
+
+  h1 {
+    @apply text-5xl font-bold
+  }
+
+  label {
+    @apply text-lg font-bold
+  }
+
+  button {
+    @apply border-2 rounded-lg w-full h-10 hover:scale-105 active:scale-100 cursor-pointer transition duration-100 ease-in-out
+  }
+}
